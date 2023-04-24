@@ -2,7 +2,7 @@
 import "../compoments.scss/NavBar.scss"
 
 
-function NavBar() {
+export default function NavBar() {
   return (
     <nav className="nav-link-from">
         <h1><a className="nav-link-left" href="#">Navbar</a></h1>
@@ -16,5 +16,3 @@ function NavBar() {
 
   );
 }
-
-export default NavBar;

@@ -9,6 +9,7 @@ import "./globals.scss";
 import styles from "./App.module.scss";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+import Article from "./components/Article";
 
 function Root() {
   return (
@@ -21,7 +22,11 @@ function Root() {
 }
 
 function HomePage() {
-  return <p>Home</p>
+  return (
+    <>
+      <Article/>
+    </>
+  )
 }
 
 function Team() {

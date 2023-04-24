@@ -13,6 +13,7 @@ function Root() {
   return (
     <div>
       <p> Root </p>
+      <Outlet/>
     </div>
   );
 }

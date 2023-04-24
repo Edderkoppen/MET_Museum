@@ -2,30 +2,39 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1%;
-    background-color: #9d6d5e;
-    border-radius: 5px;
-    padding: 20px;
+    background-color: rgb(236, 0, 41);
+    padding: 25px 0px;
 }
 
 .nav-link-left{
     text-decoration: none;
-    color: black;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    color: white;
 }
 
+.nav-link-img{
+    width: 130px;
+    height: 100px;
+}
 .nav-from-right{
     justify-content: space-around;
+    margin-right: 30px;
 }
 
 .nav-from-input{
-    border-radius: 5px;
-    padding: 5px;
-
+    border-radius: 3px;
+    padding: 17px 40px;
+    border: solid 0.5px black;
+    font-size: x-large;
 }
 
 .nav-from-button{
-    margin-left: 20px;
-    border-radius: 5px;
-    padding: 5px;
+    margin-left: 25px;
+    border-radius: 3px;
+    padding: 17px 40px;
+    border: solid 0.5px black;
+    font-size: x-large;
 
 }

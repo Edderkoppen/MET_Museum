@@ -4,7 +4,6 @@ import {
   Outlet,
   RouterProvider,
 } from "react-router-dom";
-import useSWR from "swr";
 
 import TestComponent from "./components/Test";
 
@@ -20,14 +19,10 @@ function Root() {
   );
 }
 
-function fetcher(...args: Parameters<typeof fetch>) {
-  return fetch(...args).then((res) => res.json());
-}
-
 function HomePage() {
   return (
     <div>
-      <TestComponent />
+      <TestComponent id={45734} />
     </div>
   );
 }

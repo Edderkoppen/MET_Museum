@@ -5,34 +5,31 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-// import BattlePage from "./components/BattlePage";
-import HomePage from "./components/HomePage";
-import NavBar from "./components/NavBar";
-import PokemonDetailPage from "./components/PokemonDetailPage";
-import PokemonForm from "./components/PokemonForm";
-
 import "./globals.scss";
 import styles from "./App.module.scss";
+
 
 function Root() {
   return (
     <div>
-      <NavBar />
-      <Link to="/">Accueil</Link>
-      <Link to="/recherche">Recherche</Link>
-      <Link to="/team">Equipe</Link>
-      <Outlet />
+      <p> Root </p>
     </div>
   );
+}
+
+function HomePage() {
+  return <p>Home</p>
 }
 
 function Team() {
   return <p>Team</p>;
 }
 
-function SearchPokemonPage() {
+function SearchMet() {
   return <p>🚧 Recherche 🚧</p>;
 }
+
+
 export const routes = [
   {
     path: "/",
@@ -43,20 +40,12 @@ export const routes = [
         element: <HomePage />,
       },
       {
-        path: "pokemon/:pokemonId",
-        element: <PokemonDetailPage />,
-      },
-      {
         path: "recherche",
-        element: <SearchPokemonPage />,
+        element: <SearchMet />,
       },
       {
         path: "team",
         element: <Team />,
-      },
-      {
-        path: "pokemons/new",
-        element: <PokemonForm />,
       },
     ],
   },

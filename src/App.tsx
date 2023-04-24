@@ -4,22 +4,32 @@ import {
   Outlet,
   RouterProvider,
 } from "react-router-dom";
+import useSWR from "swr";
+
+import TestComponent from "./components/Test";
 
 import "./globals.scss";
 import styles from "./App.module.scss";
-
 
 function Root() {
   return (
     <div>
       <p> Root </p>
-      <Outlet/>
+      <Outlet />
     </div>
   );
 }
 
+function fetcher(...args: Parameters<typeof fetch>) {
+  return fetch(...args).then((res) => res.json());
+}
+
 function HomePage() {
-  return <p>Home</p>
+  return (
+    <div>
+      <TestComponent />
+    </div>
+  );
 }
 
 function Team() {
@@ -29,7 +39,6 @@ function Team() {
 function SearchMet() {
   return <p>🚧 Recherche 🚧</p>;
 }
-
 
 export const routes = [
   {

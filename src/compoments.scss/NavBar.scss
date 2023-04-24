@@ -1,0 +1,31 @@
+.nav-link-from{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1%;
+    background-color: #9d6d5e;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.nav-link-left{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-from-right{
+    justify-content: space-around;
+}
+
+.nav-from-input{
+    border-radius: 5px;
+    padding: 5px;
+
+}
+
+.nav-from-button{
+    margin-left: 20px;
+    border-radius: 5px;
+    padding: 5px;
+
+}

@@ -1,36 +1,20 @@
-import React, { useState } from "react";
 
-import styles from "./NavBar.scss"
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import "../compoments.scss/NavBar.scss"
 
-function NavScrollExample() {
+
+function NavBar() {
   return (
-    <Navbar className="test">
-      <Container fluid>
-        <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
-        <Navbar.Collapse id="navbarScroll">
-          <Nav
-            className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: '100px' }}
-            navbarScroll
-          />            
-          <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-success">Search</Button>
-          </Form>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <nav className="nav-link-from">
+        <h1><a className="nav-link-left" href="#">Navbar</a></h1>
+        <form className="nav-from-right">
+            <input className="nav-from-input" type="search" placeholder="Search" aria-label="Search"/>
+            <button className="nav-from-button" type="submit">Search</button>
+        </form>
+    </nav>
+
+    
+
   );
 }
 
-export default NavScrollExample;
+export default NavBar;

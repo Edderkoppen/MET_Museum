@@ -7,12 +7,15 @@ import {
 
 import "./globals.scss";
 import styles from "./App.module.scss";
-
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 
 function Root() {
   return (
     <div>
-      <p> Root </p>
+      <NavBar />
+      <Outlet />
+      <Footer />
     </div>
   );
 }

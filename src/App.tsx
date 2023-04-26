@@ -5,6 +5,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
+import TestComponent from "./components/Test";
+
 import "./globals.scss";
 import styles from "./App.module.scss";
 import NavBar from "./components/NavBar";
@@ -36,7 +38,6 @@ function Team() {
 function SearchMet() {
   return <p>🚧 Recherche 🚧</p>;
 }
-
 
 export const routes = [
   {

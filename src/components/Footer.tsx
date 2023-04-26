@@ -1,4 +1,4 @@
-import "../compoments.scss/Footer.scss"
+import "../styles/footer.scss"
 
 export default function App() {
   return (
@@ -9,7 +9,7 @@ export default function App() {
                 <div className="">
                 <div className="col-auto">
                     <p className="pt-2">
-                    <strong className="color">Sign up for our newsletter</strong>
+                    <strong className="color">Inscrivez-vous a notre newsletter</strong>
                     </p>
                 </div>
                 <div className="center">

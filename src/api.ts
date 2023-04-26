@@ -1,4 +1,5 @@
-export const baseUrl = "https://pokeapi.fly.dev/2webd";
+export const baseUrl =
+  "https://collectionapi.metmuseum.org/public/collection/v1/objects";
 
 const sleep = (ms = 1000) => new Promise((resolve) => setTimeout(resolve, ms));
 

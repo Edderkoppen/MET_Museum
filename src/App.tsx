@@ -6,13 +6,14 @@ import {
 } from "react-router-dom";
 
 import Article from "./components/Article";
-import DetailText from "./components/DetailText";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
+import RightDetail from "./components/RightDetail";
 import TestComponent from "./components/Test";
 
 import "./globals.scss";
 import styles from "./App.module.scss";
+import DetailCard from "./components/DetailCard";
 
 function Root() {
   return (
@@ -41,8 +42,8 @@ function Team() {
 function ObjectDetail() {
   return (
     <>
-      <DetailText />
-      <TestComponent />
+      <DetailCard />
+      {/* <TestComponent /> */}
     </>
   );
 }

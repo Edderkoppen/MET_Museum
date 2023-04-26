@@ -19,9 +19,9 @@ export function usePokemonListQuery({
 }
 
 export function useTestquery() {
-  return useSWR("/43210", fetcher);
+  return useSWR("/37540", fetcher);
 }
 
-export function useDetailTextQuery() {
-  return useSWR("/45300", fetcher);
+export function useDetailQuery() {
+  return useSWR("/45734", fetcher);
 }

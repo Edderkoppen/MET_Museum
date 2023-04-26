@@ -1,0 +1,22 @@
+* {
+  outline: 1px solid blue;
+}
+
+.content-right {
+  // // width: max-content;
+  // margin: 5rem;
+  // padding: 3rem;
+  //   outline: 5px red solid;
+}
+
+.title {
+  font-weight: bolder;
+}
+
+.content {
+  margin: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3rem;
+}

@@ -24,7 +24,11 @@ function Root() {
 function HomePage() {
   return (
     <>
-      <Article/>
+      <Article id={45734}/>
+      <Article id={457134}/>
+      <Article id={45713}/>
+      <Article id={45714}/>
+      <Article id={4134}/>
     </>
   )
 }

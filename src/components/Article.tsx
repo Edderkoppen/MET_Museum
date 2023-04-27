@@ -3,10 +3,9 @@
  import ArticleCard from "./ArticleCard";"./ArticleCard"
  import { ArticleDetail } from "@/types";
 
+import "../compoments.scss/Article.scss";
 
-
-
- function fetcher(...args: Parameters<typeof fetch>) {
+function fetcher(...args: Parameters<typeof fetch>) {
   return fetch(...args).then((res) => res.json());
 }
 
@@ -41,4 +40,4 @@
         ))}
       </div>
   );
-};
+}

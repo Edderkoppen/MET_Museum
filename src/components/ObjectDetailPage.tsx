@@ -14,26 +14,18 @@ export default function ObjectDetailPage() {
   const object = query.data;
 
   return (
-    <div className="content">
-      <div>
-        <img src={object.primaryImageSmall} alt={object.title} />
-      </div>
-      <div>
-        <div className="content-right">
-          <div className="entete">
-            <p>{object.objectID}</p>
-            <h1 className="title">{object.title}</h1>
-            <p>
-              <strong>{object.artistDisplayName || "NAN"} </strong>
-              {object.artistNationality || "NAN"} 
-            </p>
-            <p>{object.objectDate}</p>
-          </div>
-          <p>{object.dimensions}</p>
-          <p>Can be found in department :</p>
-          <p>{object.department}</p>
-        </div>
-      </div>
+    <div>
+      <img src={object.primaryImageSmall} alt={object.title} />
+        <p>{object.objectID}</p>
+          <h1 className="title">{object.title}</h1>
+          <p>
+            <strong>{object.artistDisplayName || "NAN"} </strong>
+            {object.artistNationality || "NAN"} 
+          </p>
+          <p>{object.objectDate}</p>
+        <p>{object.dimensions}</p>
+        <p>Can be found in department :</p>
+        <p>{object.department}</p>
     </div>
   );
 }

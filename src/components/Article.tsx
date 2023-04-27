@@ -1,6 +1,6 @@
-import "../styles/article.scss";
+import useSWR from "swr";
 
-import "../compoments.scss/Article.scss";
+import "../styles/article.scss";
 
 function fetcher(...args: Parameters<typeof fetch>) {
   return fetch(...args).then((res) => res.json());
@@ -20,14 +20,14 @@ export default function Article(props: { id: number }) {
       <img
         className="imgSize"
         src={query.data.primaryImageSmall}
-        alt="Card image cap"
+        alt="Card cap"
       />
       <h5>{query.data.objectName}</h5>
       <p>
         Some quick example text to build on the card title and make up the bulk
-        of the card's content.
+        of the cards content.
       </p>
-      <a href="#" className="">
+      <a href="https://google.com" className="">
         Go somewhere
       </a>
     </main>

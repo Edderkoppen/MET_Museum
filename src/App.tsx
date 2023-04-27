@@ -28,7 +28,7 @@ function Root() {
 function HomePage() {
   return (
     <>
-      <Article />
+      <Article id={45734}/>
     </>
   );
 }

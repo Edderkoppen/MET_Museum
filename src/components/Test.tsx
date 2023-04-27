@@ -18,6 +18,7 @@ export default function TestComponent(props : {id : number}) {
     <div>
       <p>{query.data.objectName}</p>
       <img src={query.data.primaryImageSmall} alt={query.data.title}/>
+      <p>{query.data.isHighlight === true && "true"}</p>
     </div>
   );
 }

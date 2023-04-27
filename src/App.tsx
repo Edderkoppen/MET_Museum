@@ -28,12 +28,16 @@ function Root() {
 function HomePage() {
   return (
     <>
-      <Article />
+      <Article id={45734} />
+      <Article id={45713} />
+      <Article id={45713} />
+      <Article id={45714} />
+      <Article id={4134} />
     </>
   );
 }
 
-function Team() {
+function Cloum() {
   return <p>Team</p>;
 }
 
@@ -56,7 +60,7 @@ export const routes = [
       },
       {
         path: "team",
-        element: <Team />,
+        element: <Cloum />,
       },
       {
         path: "object/search/:objectId",

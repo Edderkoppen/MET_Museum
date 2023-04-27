@@ -5,11 +5,12 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
+import Article from "./components/Article";
+import Footer from "./components/Footer";
+import NavBar from "./components/NavBar";
+
 import "./globals.scss";
 import styles from "./App.module.scss";
-import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
-import Article from "./components/Article";
 
 function Root() {
   return (
@@ -24,19 +25,22 @@ function Root() {
 function HomePage() {
   return (
     <>
-      <Article />
+      <Article id={45734} />
+      <Article id={45713} />
+      <Article id={45713} />
+      <Article id={45714} />
+      <Article id={4134} />
     </>
-  )
+  );
 }
 
-function Team() {
+function Cloum() {
   return <p>Team</p>;
 }
 
 function SearchMet() {
   return <p>🚧 Recherche 🚧</p>;
 }
-
 
 export const routes = [
   {
@@ -53,7 +57,7 @@ export const routes = [
       },
       {
         path: "team",
-        element: <Team />,
+        element: <Cloum />,
       },
     ],
   },

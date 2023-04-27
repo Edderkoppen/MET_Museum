@@ -8,19 +8,17 @@ import {
 import Article from "./components/Article";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
-import RightDetail from "./components/RightDetail";
+import ObjectDetailPage from "./components/ObjectDetailPage";
 import TestComponent from "./components/Test";
 
 import "./globals.scss";
 import styles from "./App.module.scss";
-import DetailCard from "./components/DetailCard";
 
 function Root() {
   return (
     <div>
       <NavBar />
       <Link to="/">Root</Link>
-      <Link to="/detail">Detail</Link>
       <Outlet />
       <Footer />
     </div>
@@ -37,15 +35,6 @@ function HomePage() {
 
 function Team() {
   return <p>Team</p>;
-}
-
-function ObjectDetail() {
-  return (
-    <>
-      <DetailCard />
-      {/* <TestComponent /> */}
-    </>
-  );
 }
 
 function SearchMet() {
@@ -66,12 +55,12 @@ export const routes = [
         element: <SearchMet />,
       },
       {
-        path: "detail",
-        element: <ObjectDetail />,
-      },
-      {
         path: "team",
         element: <Team />,
+      },
+      {
+        path: "object/search/:objectId",
+        element: <ObjectDetailPage />,
       },
     ],
   },

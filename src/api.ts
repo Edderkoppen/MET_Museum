@@ -1,5 +1,5 @@
 export const baseUrl =
-  "https://collectionapi.metmuseum.org/public/collection/v1/objects";
+  "https://collectionapi.metmuseum.org/public/collection/v1";
 
 const sleep = (ms = 1000) => new Promise((resolve) => setTimeout(resolve, ms));
 

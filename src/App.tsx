@@ -5,18 +5,20 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
+import Article from "./components/Article";
+import Footer from "./components/Footer";
+import NavBar from "./components/NavBar";
+import ObjectDetailPage from "./components/ObjectDetailPage";
 import TestComponent from "./components/Test";
 
 import "./globals.scss";
 import styles from "./App.module.scss";
-import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
-import Article from "./components/Article";
 
 function Root() {
   return (
     <div>
       <NavBar />
+      <Link to="/">Root</Link>
       <Outlet />
       <Footer />
     </div>
@@ -26,13 +28,9 @@ function Root() {
 function HomePage() {
   return (
     <>
-      <Article id={45734}/>
-      <Article id={457134}/>
-      <Article id={45713}/>
-      <Article id={45714}/>
-      <Article id={4134}/>
+      <Article />
     </>
-  )
+  );
 }
 
 function Team() {
@@ -59,6 +57,10 @@ export const routes = [
       {
         path: "team",
         element: <Team />,
+      },
+      {
+        path: "object/search/:objectId",
+        element: <ObjectDetailPage />,
       },
     ],
   },

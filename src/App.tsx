@@ -13,11 +13,13 @@ import TestComponent from "./components/Test";
 
 import "./globals.scss";
 import styles from "./App.module.scss";
+import SearchBar from "./components/SearchBar";
 
 function Root() {
   return (
     <div>
       <NavBar />
+      <SearchBar />
       <Link to="/">Root</Link>
       <Outlet />
       <Footer />

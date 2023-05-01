@@ -1,0 +1,26 @@
+.nav-from-right{
+    justify-content: space-around;
+    margin-right: 30px;
+}
+
+.nav-from-input{
+    margin-top: 10px;
+    border-radius: 3px;
+    padding: 17px 40px;
+    border: solid 0.5px black;
+    font-size: medium;
+}
+
+.title-center-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-container{
+    background-color: rgb(255, 219, 219);
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    width: auto;
+    padding: 10px;
+    margin: 10px;
+}

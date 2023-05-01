@@ -1,4 +1,5 @@
 import "../styles/navbar.scss";
+import SearchBar from "./SearchBar";
 
 export default function NavBar() {
   return (
@@ -12,15 +13,6 @@ export default function NavBar() {
         <h1>Encyclopediæ</h1>
       </a>
       <form className="nav-from-right">
-        <input
-          className="nav-from-input"
-          type="search"
-          placeholder="Rechercher"
-          aria-label="Search"
-        />
-        <button className="nav-from-button" type="submit">
-          Rechercher
-        </button>
       </form>
     </nav>
   );

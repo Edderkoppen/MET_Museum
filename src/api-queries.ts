@@ -1,27 +1,19 @@
 import useSWR from "swr";
 
 import { fetcher } from "./api";
-import { PokemonDetail } from "./types";
+import { ObjectDetailType, ObjectListType } from "./object";
 
-type PokemonListResult = { count: number; results: PokemonDetail[] };
-
-export function usePokemonListQuery({
-  offset = 0,
-  limit = 10,
-}: {
-  offset?: number;
-  limit?: number;
-} = {}) {
-  return useSWR<PokemonListResult>(
-    `/pokemons/?offset=${offset}&limit=${limit}`,
-    fetcher
-  );
+export function useObjectListQuery() {
+  return useSWR<ObjectListType>("/objects?departmentIds=3", fetcher);
 }
 
-export function useTestquery() {
-  return useSWR("/objects/37540", fetcher);
+export function useHighlightQuery() {
+  return useSWR<ObjectListType>("/search?isHighlight=true&q=sunflowers", fetcher);
+}
+export function useDetailQuery(id: number) {
+  return useSWR<ObjectDetailType>("/objects/" + id, fetcher);
 }
 
-export function useDetailQuery(id : string | undefined) {
-  return useSWR("/objects/" + id, fetcher);
+export function useObjectDepartmentQuery() {
+  return useSWR<ObjectListType>("/objects?departmentIds=3", fetcher);
 }

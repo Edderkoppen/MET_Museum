@@ -1,13 +1,9 @@
-import {
-  createBrowserRouter,
-  Link,
-  Outlet,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 
-import Article from "./components/Article";
 import Footer from "./components/Footer";
+import HomePage from "./components/HomePage";
 import NavBar from "./components/NavBar";
+import ObjectCard from "./components/ObjectCard";
 import ObjectDetailPage from "./components/ObjectDetailPage";
 
 // import TestComponent from "./components/Test";
@@ -18,23 +14,10 @@ function Root() {
   return (
     <div>
       <NavBar />
-      <Link to="/">Root</Link>
       <Outlet />
       <Footer />
     </div>
   );
-}
-
-function HomePage() {
-  return (
-    <>
-      <Article id={45734} />
-    </>
-  );
-}
-
-function Team() {
-  return <p>Team</p>;
 }
 
 function SearchMet() {
@@ -48,15 +31,12 @@ export const routes = [
     children: [
       {
         path: "",
+        // element: <ObjectCard id={25521} />,
         element: <HomePage />,
       },
       {
         path: "recherche",
         element: <SearchMet />,
-      },
-      {
-        path: "team",
-        element: <Team />,
       },
       {
         path: "object/search/:objectId",

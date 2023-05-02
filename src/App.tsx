@@ -14,6 +14,8 @@ import TestComponent from "./components/Test";
 import "./globals.scss";
 import styles from "./App.module.scss";
 import SearchBar from "./components/SearchBar";
+import { func } from "prop-types";
+import Error from "./components/Error";
 
 function Root() {
   return (
@@ -63,6 +65,10 @@ export const routes = [
       {
         path: "object/search/:objectId",
         element: <ObjectDetailPage />,
+      },
+      {
+        path: "*",
+        element: <Error />
       },
     ],
   },

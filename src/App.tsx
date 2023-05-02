@@ -9,8 +9,8 @@ import Article from "./components/Article";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 import ObjectDetailPage from "./components/ObjectDetailPage";
-import TestComponent from "./components/Test";
 
+// import TestComponent from "./components/Test";
 import "./globals.scss";
 import styles from "./App.module.scss";
 
@@ -28,7 +28,7 @@ function Root() {
 function HomePage() {
   return (
     <>
-      <Article id={45734}/>
+      <Article id={45734} />
     </>
   );
 }

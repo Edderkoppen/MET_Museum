@@ -1,5 +1,4 @@
 import React from "react";
-import useSWR from "swr";
 
 import { useTestquery } from "@/api-queries";
 
@@ -13,7 +12,7 @@ export default function TestComponent() {
     <div>
       <p>{query.data.objectID}</p>
       <p>{query.data.objectName}</p>
-      <img src={query.data.primaryImageSmall} alt={query.data.title}/>
+      <img src={query.data.primaryImageSmall} alt={query.data.title} />
       <p>{query.data.isHighlight === true && "true"}</p>
     </div>
   );

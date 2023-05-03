@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import "../styles/navbar.scss";
+import SearchBar from "./SearchBar";
 
 export default function NavBar() {
   const [message, setMessage] = useState("");

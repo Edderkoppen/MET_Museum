@@ -25,6 +25,7 @@ export type TagType = {
 };
 
 export type ObjectDetailType = {
+  message?: string;
   objectID: number;
   isHighlight: boolean;
   accessionNumber: string;

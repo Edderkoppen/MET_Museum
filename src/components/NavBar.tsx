@@ -1,6 +1,15 @@
+import { useState } from "react";
+
 import "../styles/navbar.scss";
 
 export default function NavBar() {
+  const [message, setMessage] = useState("");
+  const handleChange = (event: any) => {
+    setMessage(event.target.value);
+  };
+
+  const searchLink = `/search/${message}`;
+
   return (
     <nav className="nav-link-from">
       <a className="nav-link-left" href="/">
@@ -12,13 +21,14 @@ export default function NavBar() {
         <h1>Encyclopediæ</h1>
       </a>
       <a href="/"> Home</a>
-      <a href="/recherche"> Advanced search</a>
-      <form className="nav-from-right">
+      <a href="/search"> Advanced search</a>
+      <form className="nav-from-right" action={searchLink}>
         <input
           className="nav-from-input"
           type="search"
           placeholder="Rechercher"
           aria-label="Search"
+          onChange={handleChange}
         />
         <button className="nav-from-button" type="submit">
           Rechercher

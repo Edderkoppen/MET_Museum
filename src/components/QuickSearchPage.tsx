@@ -1,11 +1,13 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import { Spinner } from "reactstrap";
 
-import { useHighlightQuery } from "@/api-queries";
+import { useSearchQuery } from "@/api-queries";
 import ObjectCard from "@/components/ObjectCard";
 
-export default function HomePage() {
-  const objectList = useHighlightQuery();
+export default function QuickSearchPage() {
+  const { terme } = useParams() as { terme: string };
+  const objectList = useSearchQuery(terme);
 
   if (objectList.isLoading) {
     return <Spinner>Loading...</Spinner>;
@@ -17,7 +19,6 @@ export default function HomePage() {
 
   return (
     <>
-      <h2>Les oeuvres en lumière</h2>
       <div
         style={{
           display: "grid",

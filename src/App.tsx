@@ -1,12 +1,12 @@
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 
+import AdvancedSearchPage from "./components/AdvancedSearchPage";
 import Footer from "./components/Footer";
 import HomePage from "./components/HomePage";
 import NavBar from "./components/NavBar";
-import ObjectCard from "./components/ObjectCard";
 import ObjectDetailPage from "./components/ObjectDetailPage";
+import QuickSearchPage from "./components/QuickSearchPage";
 
-// import TestComponent from "./components/Test";
 import "./globals.scss";
 import styles from "./App.module.scss";
 
@@ -20,10 +20,6 @@ function Root() {
   );
 }
 
-function SearchMet() {
-  return <p>🚧 Recherche 🚧</p>;
-}
-
 export const routes = [
   {
     path: "/",
@@ -31,12 +27,16 @@ export const routes = [
     children: [
       {
         path: "",
-        // element: <ObjectCard id={25521} />,
+        // element: <ObjectCard id={670903} />,
         element: <HomePage />,
       },
       {
-        path: "recherche",
-        element: <SearchMet />,
+        path: "search",
+        element: <AdvancedSearchPage />,
+      },
+      {
+        path: "search/:terme",
+        element: <QuickSearchPage />,
       },
       {
         path: "object/search/:objectId",

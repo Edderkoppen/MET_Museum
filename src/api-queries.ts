@@ -1,19 +1,26 @@
 import useSWR from "swr";
 
 import { fetcher } from "./api";
-import { ObjectDetailType, ObjectListType } from "./object";
+import { ObjectDetailType, ObjectListType, TagType} from "./object";
 
 export function useObjectListQuery() {
-  return useSWR<ObjectListType>("/objects?departmentIds=3", fetcher);
+  return useSWR<ObjectListType>("/objects", fetcher);
 }
 
 export function useHighlightQuery() {
-  return useSWR<ObjectListType>("/search?isHighlight=true&q=sunflowers", fetcher);
+  return useSWR<ObjectListType>(
+    "/search?isHighlight=true&q=sunflower",
+    fetcher
+  );
 }
-export function useDetailQuery(id: number) {
-  return useSWR<ObjectDetailType>("/objects/" + id, fetcher);
+export function useDetailQuery(id: string) {
+  return useSWR<ObjectDetailType | undefined>("/objects/" + id, fetcher);
 }
 
-export function useObjectDepartmentQuery() {
+export function useDepartmentQuery() {
   return useSWR<ObjectListType>("/objects?departmentIds=3", fetcher);
+}
+
+export function useSearchQuery(terme: string) {
+  return useSWR<ObjectListType>("/search?q=" + terme, fetcher);
 }

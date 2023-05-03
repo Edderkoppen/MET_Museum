@@ -1,15 +1,11 @@
-import {
-  createBrowserRouter,
-  Link,
-  Outlet,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 
-import Article from "./components/Article";
+import AdvancedSearchPage from "./components/AdvancedSearchPage";
 import Footer from "./components/Footer";
+import HomePage from "./components/HomePage";
 import NavBar from "./components/NavBar";
 import ObjectDetailPage from "./components/ObjectDetailPage";
-import TestComponent from "./components/Test";
+import QuickSearchPage from "./components/QuickSearchPage";
 
 import "./globals.scss";
 import styles from "./App.module.scss";
@@ -18,31 +14,10 @@ function Root() {
   return (
     <div>
       <NavBar />
-      <Link to="/">Root</Link>
       <Outlet />
       <Footer />
     </div>
   );
-}
-
-function HomePage() {
-  return (
-    <>
-      <Article id={45734} />
-      <Article id={45713} />
-      <Article id={45713} />
-      <Article id={45714} />
-      <Article id={4134} />
-    </>
-  );
-}
-
-function Cloum() {
-  return <p>Team</p>;
-}
-
-function SearchMet() {
-  return <p>🚧 Recherche 🚧</p>;
 }
 
 export const routes = [
@@ -52,15 +27,16 @@ export const routes = [
     children: [
       {
         path: "",
+        // element: <ObjectCard id={670903} />,
         element: <HomePage />,
       },
       {
-        path: "recherche",
-        element: <SearchMet />,
+        path: "search",
+        element: <AdvancedSearchPage />,
       },
       {
-        path: "team",
-        element: <Cloum />,
+        path: "search/:terme",
+        element: <QuickSearchPage />,
       },
       {
         path: "object/search/:objectId",

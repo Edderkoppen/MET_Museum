@@ -7,7 +7,7 @@ export async function fetcher(...args: Parameters<typeof fetch>) {
   const [url, ...rest] = args;
   const res = await fetch(`${baseUrl}${url}`, ...rest);
 
-  await sleep(500);
+  await sleep(200);
 
   return await res.json();
 }

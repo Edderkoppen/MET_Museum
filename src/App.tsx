@@ -1,6 +1,7 @@
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 
 import AdvancedSearchPage from "./components/AdvancedSearchPage";
+import Error from "./components/Error";
 import Footer from "./components/Footer";
 import HomePage from "./components/HomePage";
 import NavBar from "./components/NavBar";
@@ -9,9 +10,6 @@ import QuickSearchPage from "./components/QuickSearchPage";
 
 import "./globals.scss";
 import styles from "./App.module.scss";
-import SearchBar from "./components/SearchBar";
-import { func } from "prop-types";
-import Error from "./components/Error";
 
 function Root() {
   return (
@@ -47,7 +45,7 @@ export const routes = [
       },
       {
         path: "*",
-        element: <Error />
+        element: <Error />,
       },
     ],
   },

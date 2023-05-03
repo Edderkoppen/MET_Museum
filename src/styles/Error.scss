@@ -7,9 +7,11 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.04);
-    border: 1px solid rgba(0, 0, 0, 0.11);
     width: 60%;
-    padding: 50px;
-    margin: 50px;
+    margin-bottom: 100px;
+}
+
+.img-size{
+    width: 60%;
+    height: auto;
 }

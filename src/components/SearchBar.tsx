@@ -27,18 +27,20 @@ const SearchBar = () => {
 
   return (
     <div className="main--bg">
-      <input
-        className="nav-from-input"
-        placeholder="Rechercher"
-        type="text"
-        value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
-      />
-      <button
-        className="nav-from-button"
-        onClick={handleSearch}>
-        Search
-      </button>
+      <div className="main-user-cntainer">
+        <input
+          className="nav-from-input"
+          placeholder="Rechercher"
+          type="text"
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+        />
+        <button
+          className="nav-from-button"
+          onClick={handleSearch}>
+          Search
+        </button>
+      </div>
       <div className="art-center-container">
         <div className="art-img-center">
           {art && <h2 className="art-container">{art.title}</h2>}

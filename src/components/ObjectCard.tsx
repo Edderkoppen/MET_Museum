@@ -1,17 +1,13 @@
 import React from "react";
 import {
   Button,
-  Card,
-  CardBody,
-  CardSubtitle,
-  CardText,
-  CardTitle,
-  Spinner,
+  Spinner
 } from "reactstrap";
+import "../styles/ObjectCard.scss"
 
 import { useDetailQuery } from "@/api-queries";
 
-export default function ObjectCard(props: { id: string }) {
+export default function Objectdiv(props: { id: string }) {
   const query = useDetailQuery(props.id);
   const [isHovered, setIsHovered] = React.useState(false);
   const link = `/object/search/${props.id}`;
@@ -27,26 +23,23 @@ export default function ObjectCard(props: { id: string }) {
   const object = query.data;
 
   return (
-    <Card
-      style={{
-        width: "18rem",
-        transition: "background-color 0.2s ease-in-out",
-        backgroundColor: isHovered ? "pink" : undefined,
-      }}
+    <div className="object-card"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <img alt={object.title} src={object.primaryImageSmall || "./src/assets/met-logo.jpeg"} />
-      <CardBody>
-        <CardTitle tag="h5">{object.title}</CardTitle>
-        <CardSubtitle className="mb-2 text-muted" tag="h6">
+      <div className="img-container">
+        <img className="img-size" alt={object.title} src={object.primaryImageSmall || "./src/assets/met-logo.jpeg"} />
+      </div>
+      <div className="main-txt-container">
+        <h1>{object.title}</h1>
+        <h3 className="">
           {object.department}
-        </CardSubtitle>
-        <CardText>{object.objectName}</CardText>
-        <a href={link}>
+        </h3>
+        <div>{object.objectName}</div>
+          <a href={link}>
           <Button>Voir Plus</Button>
         </a>
-      </CardBody>
-    </Card>
+      </div>
+    </div>
   );
 }

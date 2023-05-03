@@ -16,28 +16,26 @@ export default function ObjectDetailPage() {
 
   if (object != undefined && !object.message)
     return (
-      <main className="main--bloc">
-        <div className="main--container">
-          <div className="main-img-container">
-            <img
-              className="main-img-size"
-              src={object.primaryImageSmall}
-              alt={object.title}
-            />
-          </div>
-          <div className="main-text-container">
-            <h2>{object.title}</h2>
-            <p>
-              <strong>{object.artistDisplayName || "NAN"} </strong>
-              {object.artistNationality || "NAN"}
-            </p>
-            <p>{object.objectDate}</p>
-            <p>{object.dimensions}</p>
-            <p>Can be found in department :</p>
-            <p>{object.department}</p>
-          </div>
+      <div className="main-container">
+        <div className="main-img-container">
+          <img
+            className="main-img-size"
+            src={object.primaryImageSmall}
+            alt={object.title}
+          />
         </div>
-      </main>
+        <div className="txt-container">
+          <h2>{object.title}</h2>
+          <p>
+            <strong>{object.artistDisplayName || "NAN"} </strong>
+            {object.artistNationality || "NAN"}
+          </p>
+          <p>{object.objectDate}</p>
+          <p>{object.dimensions}</p>
+          <p>Can be found in department :</p>
+          <p>{object.department}</p>
+        </div>
+    </div>
     );
 
   return <p>OBJET InTROUVABLE PUTAIN</p>;

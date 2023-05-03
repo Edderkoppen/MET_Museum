@@ -19,14 +19,7 @@ export default function QuickSearchPage() {
 
   return (
     <>
-      <div
-        style={{
-          display: "grid",
-          gap: 10,
-          gridTemplateColumns: "repeat(4, 1fr)",
-          margin: "1rem 0",
-        }}
-      >
+      <div className="main-container">
         {objectList.data.objectIDs.map((object) => (
           <ObjectCard key={object} id={String(object)} />
         ))}

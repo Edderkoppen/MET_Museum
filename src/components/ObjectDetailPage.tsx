@@ -16,7 +16,7 @@ export default function ObjectDetailPage() {
 
   if (object != undefined && !object.message)
     return (
-      <div className="main-container">
+      <div className="main-container-detail">
         <div className="main-img-container">
           <img
             className="main-img-size"

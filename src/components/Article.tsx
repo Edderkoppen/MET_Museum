@@ -12,7 +12,7 @@ export default function Article(props: { id: number }) {
       props.id,
     fetcher
   );
-  if (query.error) return <div>failed to load</div>;
+  if (query.error) return <h1>failed to load</h1>;
   if (query.isLoading) return <div>Loading...</div>;
 
   return (

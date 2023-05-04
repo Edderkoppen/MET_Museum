@@ -4,6 +4,7 @@ import { Spinner } from "reactstrap";
 
 import { useSearchQuery } from "@/api-queries";
 import ObjectCard from "@/components/ObjectCard";
+import "../styles/SearchBar.scss"
 
 import ViewMorePagination from "./ViewMorePagination";
 
@@ -24,14 +25,7 @@ export default function QuickSearchPage() {
   if (total > 0)
     return (
       <>
-        <div
-          style={{
-            display: "grid",
-            gap: 10,
-            gridTemplateColumns: "repeat(4, 1fr)",
-            margin: "1rem 0",
-          }}
-        >
+        <div className="main-container">
           {objectList.data.objectIDs.slice(0, limit).map((object) => (
             <ObjectCard key={object} id={String(object)} />
           ))}
@@ -44,7 +38,11 @@ export default function QuickSearchPage() {
       </>
     );
 
-  return <p>{objectList.data.total} resultat pour cette recherche</p>;
+  return (
+    <>
+      <img className="img-size-result" src="https://static.vecteezy.com/system/resources/previews/004/968/529/original/search-no-results-found-concept-illustration-flat-design-eps10-simple-modern-graphic-element-for-landing-page-empty-state-ui-infographic-icon-with-editable-stroke-line-outline-linear-vector.jpg" alt="" />    
+    </>
+  );
 }
 
 // .slice(0, 3)

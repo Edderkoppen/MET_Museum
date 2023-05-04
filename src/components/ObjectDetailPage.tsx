@@ -38,5 +38,5 @@ export default function ObjectDetailPage() {
     </div>
     );
 
-  return <p>OBJET InTROUVABLE PUTAIN</p>;
+  return <h1>OBJET INTROUVABLE</h1>;
 }

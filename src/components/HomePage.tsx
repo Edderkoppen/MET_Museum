@@ -1,10 +1,11 @@
 import React from "react";
 import { Spinner } from "reactstrap";
-import "../styles/homepage.scss";
+import "../styles/Homepage.scss";
 import { useHighlightQuery } from "@/api-queries";
 import ObjectCard from "@/components/ObjectCard";
 
 import ViewMorePagination from "./ViewMorePagination";
+import Footer from "./Footer";
 
 export default function HomePage() {
   const [page, setPage] = React.useState(1);
@@ -23,55 +24,21 @@ export default function HomePage() {
   const total = objectList.data.total;
   return (
     <>
-      <div className="main-container">
-      <h1>Les oeuvres en lumière</h1>
+      <div className="main-container" id="haut-de-page">
+        <div className="title">
+          <h1>Les oeuvres en lumière</h1>
+        </div>
         {objectList.data.objectIDs.slice(offset, limit).map((object) => (
           <ObjectCard key={object} id={String(object)} />
         ))}
       </div>
+      <a href="#haut-de-page" className="bouton-haut-de-page" id="bouton-haut-de-page"><img className="icon-size" src="https://img2.freepng.fr/20180419/pwq/kisspng-computer-icons-up-arrow-clip-art-straight-arrow-5ad925dadf5102.8619577815241804429147.jpg" alt="" /></a>
       <ViewMorePagination
         setLimit={() => {
-          setLimit(limit >= total ? limit : limit + 20);
+          setLimit(limit >= total ? limit : limit + 10);
         }}
       />
+
     </>
   );
 }
-
-// const [page, setPage] = React.useState(1);
-//   const offset = 10 * (page - 1);
-//   const pokemonsList = usePokemonListQuery({ offset });
-
-//   if (pokemonsList.isLoading) {
-//     return <p>Loading</p>;
-//   }
-
-//   if (pokemonsList.error || !pokemonsList.data) {
-//     return <p>Error</p>;
-//   }
-
-//   const lastPage = Math.ceil(pokemonsList.data.count / 10);
-
-//   return (
-//     <>
-//       <PaginationList
-//         goToPage={(page) => setPage(page)}
-//         currentPage={page}
-//         lastPage={lastPage}
-//       />
-//       <button onClick={() => setPage(page + 1)}>Next</button>
-//       <div
-//         style={{
-//           display: "grid",
-//           gap: 10,
-//           gridTemplateColumns: "repeat(4, 1fr)",
-//           margin: "1rem 0",
-//         }}
-//       >
-//         {pokemonsList.data.results.map((pokemon) => (
-//           <PokemonCard key={pokemon.id} pokemon={pokemon} />
-//         ))}
-//       </div>
-//     </>
-//   );
-// }

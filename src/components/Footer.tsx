@@ -18,7 +18,7 @@ export default function App() {
                     </div>
                 </div>
                 <div className="col-auto">
-                    <button type="submit" className="color btn btn-primary mb-4">
+                    <button type="submit" className="btn btn-secondary">
                     Envoyer
                     </button>
                 </div>

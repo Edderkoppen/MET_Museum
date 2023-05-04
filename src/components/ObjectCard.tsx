@@ -32,9 +32,7 @@ export default function Objectdiv(props: { id: string }) {
       </div>
       <div className="main-txt-container">
         <h1>{object.title}</h1>
-        <h3 className="">
-          {object.department}
-        </h3>
+        <h3>{object.department}</h3>
         <div>{object.objectName}</div>
           <a href={link}>
           <Button>Voir Plus</Button>

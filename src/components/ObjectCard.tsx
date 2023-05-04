@@ -1,11 +1,9 @@
 import React from "react";
-import {
-  Button,
-  Spinner
-} from "reactstrap";
-import "../styles/ObjectCard.scss"
+import { Button, Spinner } from "reactstrap";
 
 import { useDetailQuery } from "@/api-queries";
+
+import "../styles/ObjectCard.scss";
 
 export default function Objectdiv(props: { id: string }) {
   const query = useDetailQuery(props.id);
@@ -23,20 +21,23 @@ export default function Objectdiv(props: { id: string }) {
   const object = query.data;
 
   return (
-    <div className="object-card"
+    <div
+      className="object-card"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="img-container">
-        <img className="img-size" alt={object.title} src={object.primaryImageSmall || "./src/assets/met-logo.jpeg"} />
+        <img
+          className="img-size"
+          alt={object.title}
+          src={object.primaryImageSmall || "../src/assets/met-logo.jpeg"}
+        />
       </div>
       <div className="main-txt-container">
         <h1>{object.title}</h1>
-        <h3 className="">
-          {object.department}
-        </h3>
+        <h3 className="">{object.department}</h3>
         <div>{object.objectName}</div>
-          <a href={link}>
+        <a href={link}>
           <Button>Voir Plus</Button>
         </a>
       </div>

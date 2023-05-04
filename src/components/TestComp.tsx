@@ -1,16 +1,15 @@
 import React from "react";
-import { useParams } from "react-router-dom";
 import { Spinner } from "reactstrap";
 
 import { useSearchQuery } from "@/api-queries";
-import ObjectCard from "@/components/ObjectCard";
 
+import ObjectCard from "./ObjectCard";
 import ViewMorePagination from "./ViewMorePagination";
 
-export default function QuickSearchPage() {
+export default function TestComp(props: { request: string }) {
   const [limit, setLimit] = React.useState(20);
-  const { terme } = useParams() as { terme: string };
-  const objectList = useSearchQuery("?q=" + terme);
+
+  const objectList = useSearchQuery(props.request);
 
   if (objectList.isLoading) {
     return <Spinner>Loading...</Spinner>;
@@ -39,6 +38,6 @@ export default function QuickSearchPage() {
         ) : null}
       </>
     );
-
-  return <p>{objectList.data.total} resultat pour cette recherche</p>;
+    
+  return <p>Aucun resultat pour cette recherche</p>;
 }

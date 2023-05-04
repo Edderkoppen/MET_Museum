@@ -24,5 +24,6 @@ export function useDepartmentQuery() {
 }
 
 export function useSearchQuery(terme: string) {
-  return useSWR<ObjectListType>("/search?q=" + terme, fetcher);
+  return useSWR<ObjectListType>("/search" + terme, fetcher);
 }
+

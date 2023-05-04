@@ -1,7 +1,9 @@
 import useSWR from "swr";
 
 import { fetcher } from "./api";
-import { ObjectDetailType, ObjectListType, TagType} from "./object";
+import { ObjectDetailType, ObjectListType, TagType } from "./object";
+
+type ObjectListResult = { count: number; results: ObjectDetailType[] };
 
 export function useObjectListQuery() {
   return useSWR<ObjectListType>("/objects", fetcher);

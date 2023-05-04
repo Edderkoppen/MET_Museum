@@ -36,7 +36,7 @@ export default function ObjectCard(props: { id: string }) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <img alt={object.title} src={object.primaryImageSmall || "./src/assets/met-logo.jpeg"} />
+      <img alt={object.title} src={object.primaryImageSmall || "../src/assets/met-logo.jpeg"} />
       <CardBody>
         <CardTitle tag="h5">{object.title}</CardTitle>
         <CardSubtitle className="mb-2 text-muted" tag="h6">

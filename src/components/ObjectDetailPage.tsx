@@ -21,7 +21,7 @@ export default function ObjectDetailPage() {
           <div className="main-img-container">
             <img
               className="main-img-size"
-              src={object.primaryImageSmall}
+              src={object.primaryImageSmall || "./src/assets/met-logo.jpeg"}
               alt={object.title}
             />
           </div>

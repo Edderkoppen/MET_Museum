@@ -6,6 +6,7 @@
 
 body {
   margin: 0;
+  height: 100vh;
   background-color: var(--color-secondary);
   color: var(--color-primary);
 }
@@ -13,4 +14,9 @@ body {
 #root {
   margin: 0 auto;
   text-align: center;
+}
+
+.conteneur-page{
+  position: relative;
+  height: 100vh;
 }

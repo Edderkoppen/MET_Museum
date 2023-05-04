@@ -16,6 +16,8 @@ export default function ObjectDetailPage() {
 
   if (object != undefined && !object.message)
     return (
+      <div className="conteneur-page">
+
       <div className="main-container-detail">
         <div className="main-img-container">
           <img
@@ -36,7 +38,13 @@ export default function ObjectDetailPage() {
           <p>{object.department}</p>
         </div>
     </div>
+    </div>
     );
 
-  return <h1>OBJET INTROUVABLE</h1>;
+  return (
+    <div className="conteneur-page">
+      <h1>OBJET INTROUVABLE</h1>
+    </div>
+
+  );
 }

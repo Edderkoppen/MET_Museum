@@ -7,13 +7,13 @@ import HomePage from "./components/HomePage";
 import NavBar from "./components/NavBar";
 import ObjectDetailPage from "./components/ObjectDetailPage";
 import QuickSearchPage from "./components/QuickSearchPage";
-
+import "./styles/AdvancedSearchPage.scss"
 import "./globals.scss";
 import styles from "./App.module.scss";
 
 function Root() {
   return (
-    <div>
+    <div className="conteneur-page">
       <NavBar />
       <Outlet />
       <Footer />

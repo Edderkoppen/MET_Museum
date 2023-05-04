@@ -1,7 +1,9 @@
 import { Form, FormGroup, FormText, Input, Label } from "reactstrap";
 import "../styles/AdvancedSearchPage.scss"
+import Footer from "./Footer";
 export default function AdvancedSearchPage() {
   return (
+    <div className="conteneur-page">
     <form className="form-container">
       <label className="label-container">
         <p>Title:</p>
@@ -45,5 +47,6 @@ export default function AdvancedSearchPage() {
         </button>
       </div>
     </form>
+    </div>
   );
 }

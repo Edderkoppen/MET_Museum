@@ -1,3 +1,5 @@
+import "../styles/AdvancedSearchPage.scss"
+import Footer from "./Footer";
 import React, { useState } from "react";
 import { Spinner } from "reactstrap";
 

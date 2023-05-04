@@ -4,6 +4,7 @@ import { Spinner } from "reactstrap";
 
 import { useSearchQuery } from "@/api-queries";
 import ObjectCard from "@/components/ObjectCard";
+import "../styles/SearchBar.scss"
 
 import ViewMorePagination from "./ViewMorePagination";
 
@@ -40,5 +41,9 @@ export default function QuickSearchPage() {
       </>
     );
 
-  return <p>{objectList.data.total} resultat pour cette recherche</p>;
+  return (
+      <div className="conteneur-page">
+        <img className="img-size-result" src="https://static.vecteezy.com/system/resources/previews/004/968/529/original/search-no-results-found-concept-illustration-flat-design-eps10-simple-modern-graphic-element-for-landing-page-empty-state-ui-infographic-icon-with-editable-stroke-line-outline-linear-vector.jpg" alt="" />    
+      </div>
+  );
 }

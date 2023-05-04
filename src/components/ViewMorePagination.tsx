@@ -1,3 +1,5 @@
+import "../styles/HomePage.scss"
+
 export default function ViewMorePagination({
   setLimit,
 }: {
@@ -5,6 +7,7 @@ export default function ViewMorePagination({
 }) {
   return (
     <button
+      className="btn btn-secondary main-button"
       onClick={() => {
         // setPage(page + 1);
         setLimit();

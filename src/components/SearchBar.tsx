@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+
 import "../styles/SearchBar.scss";
 
 type Art = {
   objectID: number;
   title: string;
-  primaryImage : string;
-}
+  primaryImage: string;
+};
 
 const SearchBar = () => {
   const [inputValue, setInputValue] = useState("");
@@ -35,9 +36,7 @@ const SearchBar = () => {
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
-        <button
-          className="nav-from-button"
-          onClick={handleSearch}>
+        <button className="nav-from-button" onClick={handleSearch}>
           Search
         </button>
       </div>

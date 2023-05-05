@@ -29,8 +29,8 @@ export default function NavBar() {
             />
             <h1 className="h1-color">Encyclopediæ</h1>
             <div className="link-spacing">
-              <a href="/"> Home</a>
-              <button className="button-style" onClick={toggle}>
+              <a className="link-hover" href="/"> Home</a>
+              <button className="button-style link-hover" onClick={toggle}>
                 {" "}
                 Advanced search
               </button>

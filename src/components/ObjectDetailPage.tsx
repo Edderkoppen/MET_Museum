@@ -28,19 +28,15 @@ export default function ObjectDetailPage() {
             />
           </div>
           <div className="txt-container">
-            <h2>{object.title}</h2>
-            <p>
-              <strong>{object.artistDisplayName || "No data"} </strong>
-              {object.artistNationality || "No data"}
-            </p>
-            <p>{object.objectName}</p>
-            <p>
-              {object.objectBeginDate} - {object.objectEndDate}
-            </p>
-            <p>{object.dimensions}</p>
-            <p>{object.culture}</p>
-            <p>Can be found in department :</p>
-            <p>{object.department}</p>
+            <h1>Artwork Details</h1>
+            <p><strong>Title : </strong>{object.title}</p>
+            <p><strong>Authors : </strong>{object.artistDisplayName || "No data"}</p>
+            <p><strong>Nationality : </strong>{object.artistNationality || "No data"}</p>
+            <p><strong>Object Name : </strong>{object.objectName}</p>
+            <p><strong>Dates : </strong>{object.objectBeginDate} - {object.objectEndDate}</p>
+            <p><strong>Dimensions : </strong>{object.dimensions}</p>
+            <p><strong>Culture : </strong>{object.culture}</p>
+            <p><strong>Departments : </strong>{object.department}</p>
           </div>
         </div>
       </div>

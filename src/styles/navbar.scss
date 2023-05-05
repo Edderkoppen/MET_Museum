@@ -5,10 +5,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
   background-color: rgb(236, 0, 41);
   padding: 25px 0px;
   width: 100vw;
-  height: 100px;
+  height: auto;
 }
 .nav-container-left {
   display: flex;
@@ -58,18 +59,12 @@
   border: solid 0.5px black;
   font-size: medium;
 }
-
-.coucou {
-  display: flex;
-  flex-direction: column;
-  outline: 5px blue solid;
-}
 .border-none {
   border: none;
 }
 .button-style {
   background-color: transparent;
-  padding-left: 10px;
+  margin: 10px;
   border: none;
   color: white;
 }
@@ -78,4 +73,21 @@
 }
 .link-spacing {
   padding-left: 50px;
+}
+
+.link-hover:hover{
+  border-bottom: 2px solid white;
+}
+
+@media screen and (max-width: 1300px) {
+  .nav-link-from {
+    flex-direction: column;
+  }
+  .nav-container-left{
+    flex-direction: column;
+    justify-content: center;    
+  }
+  .link-spacing{
+    padding: 0%;
+  }
 }

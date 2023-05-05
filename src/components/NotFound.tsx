@@ -2,7 +2,7 @@ import "../styles/not_found.scss";
 
 export default function NotFound() {
   return (
-    <div className="conteneur-page">
+    <div className="conteneur-page-not-found">
       <h1 className="h1-top-padding">No results found</h1>
       <img
         className="img-size-result"

@@ -5,7 +5,7 @@ import { useDetailQuery } from "@/api-queries";
 
 import "../styles/object_card.scss";
 
-export default function Objectdiv(props: { id: string }) {
+export default function ObjectCard(props: { id: string }) {
   const query = useDetailQuery(props.id);
   const link = `/object/search/${props.id}`;
 

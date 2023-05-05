@@ -1,11 +1,12 @@
-import "../styles/AdvancedSearchPage.scss"
-import Footer from "./Footer";
 import React, { useState } from "react";
 import { Spinner } from "reactstrap";
 
+import Footer from "./Footer";
 import ObjectCard from "./ObjectCard";
 import TestComp from "./TestComp";
 import ViewMorePagination from "./ViewMorePagination";
+
+import "../styles/AdvancedSearchPage.scss";
 
 const initialValues = {
   title: "",
@@ -30,7 +31,7 @@ export default function AdvancedSearchPage() {
     });
   };
 
-  const requestLink = `?q=${values.title}${
+  const requestLink = `/search/${values.title}${
     values.title == "" ? "" : "&title=" + values.title
   }${values.department == "" ? "" : "&departmentId=" + values.department}${
     values.objectName == "" ? "" : "&objectName=" + values.objectName
@@ -44,7 +45,7 @@ export default function AdvancedSearchPage() {
 
   return (
     <>
-      <form className="form-container">
+      <form action={requestLink}>
         <label className="label-container">
           Title:
           <input
@@ -127,7 +128,7 @@ export default function AdvancedSearchPage() {
             onChange={handleInputChange}
           />
         </label>
-        <TestComp request={requestLink} />
+        <button type="submit">Submit</button>
       </form>
     </>
   );

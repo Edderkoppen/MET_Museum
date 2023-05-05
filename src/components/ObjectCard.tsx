@@ -3,29 +3,19 @@ import { Button, Spinner } from "reactstrap";
 
 import { useDetailQuery } from "@/api-queries";
 
-import "../styles/ObjectCard.scss";
+import "../styles/object_card.scss";
 
 export default function Objectdiv(props: { id: string }) {
   const query = useDetailQuery(props.id);
-  const [isHovered, setIsHovered] = React.useState(false);
   const link = `/object/search/${props.id}`;
 
-  if (query.isLoading) {
-    return <Spinner>Loading...</Spinner>;
-  }
-
-  if (query.error || !query.data) {
-    return <p>Error</p>;
-  }
+  if (query.isLoading) return <Spinner>Loading...</Spinner>;
+  if (query.error || !query.data) return <p>Error</p>;
 
   const object = query.data;
 
   return (
-    <div
-      className="object-card"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
+    <div className="object-card">
       <div className="img-container">
         <img
           className="img-size"
@@ -34,9 +24,9 @@ export default function Objectdiv(props: { id: string }) {
         />
       </div>
       <div className="main-txt-container">
-        <h1>{object.title}</h1>
-        <h3 className="">{object.department}</h3>
-        <h3>{object.objectName}</h3>
+        <h1>{object.title || "No data"}</h1>
+        <h3 className="">{object.department || "No data"}</h3>
+        <h3>{object.objectName || "No data"}</h3>
         <a href={link}>
           <Button className="more-detail">More details</Button>
         </a>

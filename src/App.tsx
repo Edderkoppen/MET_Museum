@@ -7,7 +7,7 @@ import NavBar from "./components/NavBar";
 import ObjectDetailPage from "./components/ObjectDetailPage";
 import SearchPage from "./components/SearchPage";
 
-import "./styles/AdvancedSearchPage.scss";
+import "./styles/advanced_search.scss";
 import "./globals.scss";
 import styles from "./App.module.scss";
 
@@ -25,7 +25,7 @@ function Root() {
         <img
           className="icon-size"
           src="https://cdn.onlinewebfonts.com/svg/img_109187.png"
-          alt=""
+          alt="arrow up"
         />
       </a>
     </div>

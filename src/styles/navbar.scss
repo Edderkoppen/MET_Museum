@@ -1,82 +1,81 @@
-* a{
-    text-decoration: none;
+* a {
+  text-decoration: none;
 }
-.nav-link-from{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(236, 0, 41);
-    padding: 25px 0px;
-    width: 100vw;
-    height: 100px;
+.nav-link-from {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(236, 0, 41);
+  padding: 25px 0px;
+  width: 100vw;
+  height: 100px;
 }
-.nav-container-left{
-    display: flex;
-    align-items: center;
+.nav-container-left {
+  display: flex;
+  align-items: center;
 }
-.nav-container-left a{
-    margin-left: 30px;
-    font-size: 1.5em;
-    color: white;
+.nav-container-left a {
+  margin-left: 30px;
+  font-size: 1.5em;
+  color: white;
 }
-.nav-container-left button{
-    margin-left: 30px;
-    font-size: 1.5em;
-    color: white;
-}
-
-.nav-link-left{
-    text-decoration: none;
-    margin-left: 10px;
-    display: flex;
-    align-items: center;
-    color: white;
+.nav-container-left button {
+  margin-left: 30px;
+  font-size: 1.5em;
+  color: white;
 }
 
-.nav-link-img{
-    width: 130px;
-    height: 100px;
-}
-.nav-from-right{
-    justify-content: space-around;
-    margin-right: 30px;
-}
-.h1-color{
-    color: white;
-}
-.nav-from-input{
-    border-radius: 3px;
-    padding: 10px 1.2rem;
-    border: solid 0.5px black;
-    font-size: medium;
+.nav-link-left {
+  text-decoration: none;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  color: white;
 }
 
-.nav-from-button{
-    margin-left: 25px;
-    border-radius: 3px;
-    padding: 10px 1.2rem;
-    border: solid 0.5px black;
-    font-size: medium;
-
+.nav-link-img {
+  width: 130px;
+  height: 100px;
+}
+.nav-from-right {
+  justify-content: space-around;
+  margin-right: 30px;
+}
+.h1-color {
+  color: white;
+}
+.nav-from-input {
+  border-radius: 3px;
+  padding: 10px 1.2rem;
+  border: solid 0.5px black;
+  font-size: medium;
 }
 
-.coucou{
-    display: flex;
-    flex-direction: column;
-    outline: 5px blue solid;
+.nav-from-button {
+  margin-left: 25px;
+  border-radius: 3px;
+  padding: 10px 1.2rem;
+  border: solid 0.5px black;
+  font-size: medium;
 }
-.border-none{
-    border: none;
+
+.coucou {
+  display: flex;
+  flex-direction: column;
+  outline: 5px blue solid;
 }
-.button-style{
-    background-color: transparent;
-    padding-left: 10px;
-    border: none;
-    color: white;
+.border-none {
+  border: none;
 }
-.style{
-    border: none;
+.button-style {
+  background-color: transparent;
+  padding-left: 10px;
+  border: none;
+  color: white;
 }
-.link-spacing{
-    padding-left: 50px;
+.style {
+  border: none;
+}
+.link-spacing {
+  padding-left: 50px;
 }

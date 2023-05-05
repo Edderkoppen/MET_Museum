@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-import "../styles/AdvancedSearchPage.scss";
+import "../styles/advanced_search.scss";
 
 const initialValues = {
   title: "",
@@ -14,7 +14,7 @@ const initialValues = {
   tag: "",
 };
 
-export default function AdvancedSearchPage() {
+export default function AdvancedSearchBar() {
   const [values, setValues] = useState(initialValues);
 
   const handleInputChange = (event: any) => {
@@ -141,11 +141,10 @@ export default function AdvancedSearchPage() {
             onChange={handleInputChange}
           />
         </label>
-        <button type="submit" disabled={!disabled}>
+        <button className="button-style-nav" type="submit" disabled={!disabled}>
           Submit
         </button>
       </form>
-      <button className="button-style-nav" type="submit">Submit</button>
     </>
   );
 }

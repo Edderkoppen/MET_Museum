@@ -1,10 +1,6 @@
-import "../styles/HomePage.scss";
+import "../styles/home_page.scss";
 
-export default function ViewMorePagination({
-  setLimit,
-}: {
-  setLimit: () => void;
-}) {
+export default function ViewMoreButton({ setLimit }: { setLimit: () => void }) {
   return (
     <button
       className="btn btn-secondary main-button"

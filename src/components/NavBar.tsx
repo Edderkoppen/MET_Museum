@@ -1,22 +1,20 @@
 import React, { useState } from "react";
-import { Button, Card, CardBody, Collapse } from "reactstrap";
+import { Card, Collapse } from "reactstrap";
 
-import AdvancedSearchPage from "./AdvancedSearchPage";
+import AdvancedSearchBar from "./AdvancedSearchBar";
 
 import "../styles/navbar.scss";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
   const [message, setMessage] = useState("");
 
   const handleChange = (event: any) => {
     setMessage(event.target.value);
   };
+  const toggle = () => setIsOpen(!isOpen);
 
   const disabled = message.length > 0;
-
   const searchLink = `/search/${message}`;
 
   return (
@@ -24,16 +22,19 @@ export default function NavBar() {
       <React.StrictMode>
         <nav className="nav-link-from" id="haut-de-page">
           <div className="nav-container-left">
-              <img
-                className="nav-link-img"
-                src="https://centaur-wp.s3.eu-central-1.amazonaws.com/designweek/prod/content/uploads/2016/02/20100425/WO_Met_Wired_21816_2.jpg"
-                alt=""
-              />
-              <h1 className="h1-color">Encyclopediæ</h1>
-              <div className="link-spacing">
-                <a href="/"> Home</a>
-                <button className="button-style" onClick={toggle}> Advanced search</button>
-              </div>
+            <img
+              className="nav-link-img"
+              src="https://centaur-wp.s3.eu-central-1.amazonaws.com/designweek/prod/content/uploads/2016/02/20100425/WO_Met_Wired_21816_2.jpg"
+              alt=""
+            />
+            <h1 className="h1-color">Encyclopediæ</h1>
+            <div className="link-spacing">
+              <a href="/"> Home</a>
+              <button className="button-style" onClick={toggle}>
+                {" "}
+                Advanced search
+              </button>
+            </div>
           </div>
           <form className="nav-from-right" action={searchLink}>
             <input
@@ -46,7 +47,7 @@ export default function NavBar() {
             <button
               className="nav-from-button"
               type="submit"
-              disabled={disabled}
+              disabled={!disabled}
             >
               Rechercher
             </button>
@@ -54,7 +55,7 @@ export default function NavBar() {
         </nav>
         <Collapse isOpen={isOpen}>
           <Card className="style">
-            <AdvancedSearchPage />
+            <AdvancedSearchBar />
           </Card>
         </Collapse>
       </React.StrictMode>

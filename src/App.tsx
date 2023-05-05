@@ -17,6 +17,7 @@ function Root() {
     <div className="conteneur-page">
       <NavBar />
       <Outlet />
+      <Footer />
       <a
         href="#haut-de-page"
         className="bouton-haut-de-page"
@@ -28,7 +29,6 @@ function Root() {
           alt=""
         />
       </a>
-      <Footer />
     </div>
   );
 }

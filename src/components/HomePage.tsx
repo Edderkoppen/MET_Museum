@@ -44,12 +44,13 @@ export default function HomePage() {
         />
       </a>
 
-      <ViewMorePagination
-        setLimit={() => {
-          setLimit(limit >= total ? limit : limit + 20);
-        }}
-      />
+      {total > 20 ? (
+        <ViewMorePagination
+          setLimit={() => {
+            setLimit(limit >= total ? limit : limit + 20);
+          }}
+        />
+      ) : null}
     </>
   );
-
 }

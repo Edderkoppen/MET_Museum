@@ -20,7 +20,7 @@ export default function App() {
                     </div>
                 </div>
                 <div className="col-auto">
-                    <button type="submit" className="btn btn-secondary">
+                    <button type="submit" className="btn btn-secondary custom-footer">
                     Envoyer
                     </button>
                 </div>

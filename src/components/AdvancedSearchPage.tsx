@@ -45,7 +45,7 @@ export default function AdvancedSearchPage() {
 
   return (
     <>
-      <form action={requestLink}>
+      <form className="form-container" action={requestLink}>
         <label className="label-container">
           Title:
           <input
@@ -56,80 +56,88 @@ export default function AdvancedSearchPage() {
             onChange={handleInputChange}
           />
         </label>
-        <label>
+        <label className="label-container">
           Department ID:
           <input
+            className="input-container"
             type="text"
             value={values.department}
             name="department"
             onChange={handleInputChange}
           />
         </label>
-        <label>
+        <label className="label-container">
           Object Name:
           <input
+            className="input-container"
             type="text"
             value={values.objectName}
             name="objectName"
             onChange={handleInputChange}
           />
         </label>
-        <label>
+        <label className="label-container">
           Culture:
           <input
+            className="input-container"
             type="text"
             value={values.culture}
             name="culture"
             onChange={handleInputChange}
           />
         </label>
-        <label>
+        <label className="label-container">
           Object Begin Date:
           <input
+            className="input-container"
             type="text"
             value={values.beginDate}
             name="beginDate"
             onChange={handleInputChange}
           />
         </label>
-        <label>
+        <label className="label-container">
           Object End Date:
           <input
+            className="input-container"
             type="text"
             value={values.endDate}
             name="endDate"
             onChange={handleInputChange}
           />
         </label>
-        <label>
+        <label className="label-container">
           Country:
           <input
+            className="input-container"
             type="text"
             value={values.country}
             name="country"
             onChange={handleInputChange}
           />
         </label>
-        <label>
+        <label className="label-container">
           Region:
           <input
+            className="input-container"
             type="text"
             value={values.region}
             name="region"
             onChange={handleInputChange}
           />
         </label>
-        <label>
+        <label className="label-container">
           Tag:
           <input
+            className="input-container"
             type="text"
             value={values.tag}
             name="tag"
             onChange={handleInputChange}
           />
         </label>
-        <button type="submit">Submit</button>
       </form>
+      <button className="button-style-nav" type="submit">Submit</button>
     </>
   );
 }

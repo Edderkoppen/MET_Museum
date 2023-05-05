@@ -32,23 +32,13 @@ export default function HomePage() {
           <ObjectCard key={object} id={String(object)} />
         ))}
       </div>
-      <a
-        href="#haut-de-page"
-        className="bouton-haut-de-page"
-        id="bouton-haut-de-page"
-      >
-        <img
-          className="icon-size"
-          src="https://img2.freepng.fr/20180419/pwq/kisspng-computer-icons-up-arrow-clip-art-straight-arrow-5ad925dadf5102.8619577815241804429147.jpg"
-          alt=""
+      {total > 20 ? (
+        <ViewMorePagination
+          setLimit={() => {
+            setLimit(limit >= total ? limit : limit + 20);
+          }}
         />
-      </a>
-
-      <ViewMorePagination
-        setLimit={() => {
-          setLimit(limit >= total ? limit : limit + 20);
-        }}
-      />
+      ) : null}
     </>
   );
 

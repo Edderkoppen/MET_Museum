@@ -30,7 +30,12 @@
   margin-left: 50px;
   font-size: 2em;
 }
-.btn-secondary{
+.more-detail{
   background-color: red;
   border: none;
+  padding: 15px;
+}
+
+.more-detail:hover{
+  background-color: rgb(161, 17, 17);
 }

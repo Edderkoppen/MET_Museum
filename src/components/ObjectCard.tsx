@@ -36,9 +36,9 @@ export default function Objectdiv(props: { id: string }) {
       <div className="main-txt-container">
         <h1>{object.title}</h1>
         <h3 className="">{object.department}</h3>
-        <div>{object.objectName}</div>
+        <h3>{object.objectName}</h3>
         <a href={link}>
-          <Button>More details</Button>
+          <Button className="more-detail">More details</Button>
         </a>
       </div>
     </div>

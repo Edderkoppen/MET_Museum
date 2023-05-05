@@ -30,7 +30,7 @@ export default function NavBar() {
             <h1>Encyclopediæ</h1>
           </a>
           <a href="/"> Home</a>
-          <button onClick={toggle}> Advanced search</button>
+          <button className="button-style" onClick={toggle}> Advanced search</button>
           {/* <React.StrictMode>
           </React.StrictMode> */}
         </div>
@@ -48,9 +48,9 @@ export default function NavBar() {
         </form>
       </nav>
       <Collapse isOpen={isOpen}>
-        <Card className="style">
+        <div className="style">
           <AdvancedSearchPage />
-        </Card>
+        </div>
       </Collapse>
       
     </>

@@ -17,6 +17,7 @@ function Root() {
     <div className="conteneur-page">
       <NavBar />
       <Outlet />
+      <Footer />
       <a
         href="#haut-de-page"
         className="bouton-haut-de-page"
@@ -24,11 +25,10 @@ function Root() {
       >
         <img
           className="icon-size"
-          src="https://img2.freepng.fr/20180419/pwq/kisspng-computer-icons-up-arrow-clip-art-straight-arrow-5ad925dadf5102.8619577815241804429147.jpg"
+          src="https://cdn.onlinewebfonts.com/svg/img_109187.png"
           alt=""
         />
       </a>
-      <Footer />
     </div>
   );
 }

@@ -13,8 +13,13 @@
     align-items: center;
 }
 .nav-container-left a{
-    margin-left: 20px;
-    font-size: 1.2em;
+    margin-left: 30px;
+    font-size: 1.5em;
+    color: white;
+}
+.nav-container-left button{
+    margin-left: 30px;
+    font-size: 1.5em;
     color: white;
 }
 
@@ -37,7 +42,7 @@
 
 .nav-from-input{
     border-radius: 3px;
-    padding: 17px 40px;
+    padding: 10px 1.2rem;
     border: solid 0.5px black;
     font-size: medium;
 }
@@ -45,7 +50,7 @@
 .nav-from-button{
     margin-left: 25px;
     border-radius: 3px;
-    padding: 17px 40px;
+    padding: 10px 1.2rem;
     border: solid 0.5px black;
     font-size: medium;
 
@@ -57,5 +62,14 @@
     outline: 5px blue solid;
 }
 .border-none{
+    border: none;
+}
+.button-style{
+    background-color: transparent;
+    padding-left: 10px;
+    border: none;
+    color: white;
+}
+.style{
     border: none;
 }

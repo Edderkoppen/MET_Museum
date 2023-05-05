@@ -14,7 +14,7 @@ import styles from "./App.module.scss";
 
 function Root() {
   return (
-    <div className="conteneur-page">
+    <div className="conteneur-page main-container">
       <NavBar />
       <Outlet />
       <Footer />

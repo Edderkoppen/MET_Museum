@@ -1,6 +1,5 @@
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 
-import AdvancedSearchPage from "./components/AdvancedSearchPage";
 import Error from "./components/Error";
 import Footer from "./components/Footer";
 import HomePage from "./components/HomePage";
@@ -42,10 +41,6 @@ export const routes = [
         path: "",
         element: <HomePage />,
       },
-      // {
-      //   path: "search",
-      //   element: <AdvancedSearchPage />,
-      // },
       {
         path: "search/:terme",
         element: <SearchPage />,

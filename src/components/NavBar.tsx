@@ -43,7 +43,11 @@ export default function NavBar() {
               aria-label="Search"
               onChange={handleChange}
             />
-            <button className="nav-from-button" type="submit" disabled={disabled}>
+            <button
+              className="nav-from-button"
+              type="submit"
+              disabled={disabled}
+            >
               Rechercher
             </button>
           </form>

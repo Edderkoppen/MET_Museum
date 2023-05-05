@@ -38,7 +38,7 @@ export default function Objectdiv(props: { id: string }) {
         <h3 className="">{object.department}</h3>
         <div>{object.objectName}</div>
         <a href={link}>
-          <Button>Voir Plus</Button>
+          <Button>More details</Button>
         </a>
       </div>
     </div>

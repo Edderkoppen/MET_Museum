@@ -10,6 +10,7 @@ export default function NavBar() {
 
   const toggle = () => setIsOpen(!isOpen);
   const [message, setMessage] = useState("");
+
   const handleChange = (event: any) => {
     setMessage(event.target.value);
   };
@@ -18,7 +19,7 @@ export default function NavBar() {
 
   return (
     <>
-      <nav className="nav-link-from">
+      <nav className="nav-link-from" id="haut-de-page">
         <div className="nav-container-left">
           <a className="nav-link-left" href="/">
             <img
@@ -30,15 +31,8 @@ export default function NavBar() {
           </a>
           <a href="/"> Home</a>
           <button onClick={toggle}> Advanced search</button>
-          <React.StrictMode>
-            {/* <button
-              color="primary"
-              style={{ marginBottom: "1rem" }}
-              onClick={toggle}
-            >
-              test
-            </button> */}
-          </React.StrictMode>
+          {/* <React.StrictMode>
+          </React.StrictMode> */}
         </div>
         <form className="nav-from-right" action={searchLink}>
           <input

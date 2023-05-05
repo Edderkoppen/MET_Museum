@@ -40,13 +40,12 @@ export const routes = [
     children: [
       {
         path: "",
-        // element: <ObjectCard id={670903} />,
         element: <HomePage />,
       },
-      {
-        path: "search",
-        element: <AdvancedSearchPage />,
-      },
+      // {
+      //   path: "search",
+      //   element: <AdvancedSearchPage />,
+      // },
       {
         path: "search/:terme",
         element: <SearchPage />,

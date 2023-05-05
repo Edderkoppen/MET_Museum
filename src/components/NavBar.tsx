@@ -15,6 +15,8 @@ export default function NavBar() {
     setMessage(event.target.value);
   };
 
+  const disabled = message.length > 0;
+
   const searchLink = `/search/${message}`;
 
   return (
@@ -41,7 +43,7 @@ export default function NavBar() {
               aria-label="Search"
               onChange={handleChange}
             />
-            <button className="nav-from-button" type="submit">
+            <button className="nav-from-button" type="submit" disabled={disabled}>
               Rechercher
             </button>
           </form>

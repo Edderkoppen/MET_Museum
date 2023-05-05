@@ -24,16 +24,16 @@ export default function NavBar() {
       <React.StrictMode>
         <nav className="nav-link-from" id="haut-de-page">
           <div className="nav-container-left">
-            <a className="nav-link-left" href="/">
               <img
                 className="nav-link-img"
                 src="https://centaur-wp.s3.eu-central-1.amazonaws.com/designweek/prod/content/uploads/2016/02/20100425/WO_Met_Wired_21816_2.jpg"
                 alt=""
               />
-              <h1>Encyclopediæ</h1>
-            </a>
-            <a href="/"> Home</a>
-            <button onClick={toggle}> Advanced search</button>
+              <h1 className="h1-color">Encyclopediæ</h1>
+              <div className="link-spacing">
+                <a href="/"> Home</a>
+                <button className="button-style" onClick={toggle}> Advanced search</button>
+              </div>
           </div>
           <form className="nav-from-right" action={searchLink}>
             <input

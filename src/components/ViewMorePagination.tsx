@@ -1,4 +1,4 @@
-import "../styles/HomePage.scss"
+import "../styles/HomePage.scss";
 
 export default function ViewMorePagination({
   setLimit,

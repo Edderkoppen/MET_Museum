@@ -1,10 +1,4 @@
 import React, { useState } from "react";
-import { Spinner } from "reactstrap";
-
-import Footer from "./Footer";
-import ObjectCard from "./ObjectCard";
-import TestComp from "./TestComp";
-import ViewMorePagination from "./ViewMorePagination";
 
 import "../styles/AdvancedSearchPage.scss";
 
@@ -30,6 +24,17 @@ export default function AdvancedSearchPage() {
       [name]: value,
     });
   };
+
+  const disabled =
+    values.title.length > 0 ||
+    values.department.length > 0 ||
+    values.objectName.length > 0 ||
+    values.culture.length > 0 ||
+    values.beginDate.length > 0 ||
+    values.endDate.length > 0 ||
+    values.country.length > 0 ||
+    values.region.length > 0 ||
+    values.tag.length > 0;
 
   const requestLink = `/search/${values.title}${
     values.title == "" ? "" : "&title=" + values.title
@@ -136,6 +141,9 @@ export default function AdvancedSearchPage() {
             onChange={handleInputChange}
           />
         </label>
+        <button type="submit" disabled={!disabled}>
+          Submit
+        </button>
       </form>
       <button className="button-style-nav" type="submit">Submit</button>
     </>

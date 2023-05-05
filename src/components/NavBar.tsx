@@ -29,7 +29,6 @@ export default function NavBar() {
             />
             <h1>Encyclopediæ</h1>
           </a>
-          <a href="/"> Home</a>
           <button className="button-style" onClick={toggle}> Advanced search</button>
           {/* <React.StrictMode>
           </React.StrictMode> */}

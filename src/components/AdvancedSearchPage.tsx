@@ -44,10 +44,11 @@ export default function AdvancedSearchPage() {
 
   return (
     <>
-      <form>
-        <label>
+      <form className="form-container">
+        <label className="label-container">
           Title:
           <input
+            className="input-container"
             type="text"
             value={values.title}
             name="title"
@@ -126,18 +127,8 @@ export default function AdvancedSearchPage() {
             onChange={handleInputChange}
           />
         </label>
-        <button type="submit">Submit</button>
-        <p>titre : {values.title}</p>
-        <p>dpt : {values.department}</p>
-        <p>objName : {values.objectName}</p>
-        <p>culture : {values.culture}</p>
-        <p>begin : {values.beginDate}</p>
-        <p>country : {values.country}</p>
-        <p>region : {values.region}</p>
-        <p>end : {values.endDate}</p>
-        <p>tag : {values.tag}</p>
+        <TestComp request={requestLink} />
       </form>
-      <TestComp request={requestLink} />
     </>
   );
 }

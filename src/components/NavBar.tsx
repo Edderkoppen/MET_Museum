@@ -54,10 +54,11 @@ export default function NavBar() {
         </form>
       </nav>
       <Collapse isOpen={isOpen}>
-        <Card>
+        <Card className="style">
           <AdvancedSearchPage />
         </Card>
       </Collapse>
+      
     </>
   );
 }

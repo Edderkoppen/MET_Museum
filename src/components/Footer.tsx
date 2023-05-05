@@ -2,7 +2,9 @@ import "../styles/footer.scss"
 
 export default function App() {
   return (
+    
     <footer className="bg text-center">
+        
         <div className="container p-4 pb-0">
             <section className="">
             <form className="align" action="">

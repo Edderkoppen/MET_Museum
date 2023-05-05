@@ -7,13 +7,18 @@
 .title{
     margin: 50px;
     font-size: 1.5rem;
+    background-color: rgb(236, 0, 41);
+    padding: 20px;
+    border-radius: 3px;
+    color: white;
+    width: 90%;
 }
 .main-button{
     margin: 20px;
 }
 .bouton-haut-de-page {
     position: fixed;
-    bottom: 20px;
+    bottom: 10%;
     right: 20px;
     color: black;
     margin: 15px;
